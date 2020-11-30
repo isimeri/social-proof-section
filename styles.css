@@ -118,7 +118,7 @@ body{
     align-self: flex-end;
 }
 .buyer-profile{
-    background-color: rgba(0,0,0,0.2);
+    /*background-color: rgba(0,0,0,0.2);*/
     display: flex;
     min-width: 190px;
     width: 60%;
