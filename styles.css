@@ -20,6 +20,7 @@ body{
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
 }
 .desktop-bottom-bg{
     position: absolute;
@@ -55,10 +56,11 @@ body{
     padding-left: 2rem;
     padding-right: 6rem;
     width: 80%;
+    line-height: 1.5rem;
 }
 .ratings-container{
     /*background-color: rgba(0,0,50,0.1);*/
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -68,17 +70,19 @@ body{
 .rating-div{
     background-color: rgba(150,100,150,0.1);
     display: flex;
-    width: 85%;
+    min-width: 65%;
     padding: 1.5rem 2rem;
     border-radius: 0.5rem;
 }
 .rat1{
     align-self: flex-start;
     margin-top: 5vh;
+    margin-left: 4vw;
 }
 .rat3{
     align-self: flex-end;
     margin-bottom: 5vh;
+    margin-right: 4vw;
 }
 .stars-container{
     margin-right: 1.5rem;
@@ -100,9 +104,12 @@ body{
     background-color: hsl(300, 43%, 22%);
     border-radius: 1rem;
     width: 30%;
-    height: 80%;
+    min-height: 80%;
     padding: 2rem;
     color: white;
+}
+.colton{
+    align-self: flex-start;
 }
 .irene{
     align-self: center;
@@ -111,8 +118,9 @@ body{
     align-self: flex-end;
 }
 .buyer-profile{
-    /*background-color: rgba(0,0,0,0.2);*/
+    background-color: rgba(0,0,0,0.2);
     display: flex;
+    min-width: 190px;
     width: 60%;
     justify-content: space-between;
     align-items: center;
@@ -127,6 +135,7 @@ body{
 }
 .card-description{
     margin-top: 3vh;
+    
     line-height: 1.8rem;
 }
 .attribution{
@@ -141,4 +150,121 @@ body{
 }
 .attribution a:hover{
     color: rgb(62, 138, 32);
+}
+
+@media(max-width: 1400px){
+    .description-ratings-container{
+        grid-template-columns: 40% 60%;
+    }
+    .big-header{
+        min-width: 80%;
+        padding: 3vh 0 3vh 2rem;
+    }
+    .description{
+        padding-right: 2rem;
+        min-width: 80%;
+        padding-bottom: 1vh;
+    }
+}
+@media(max-width: 1100px){
+    .rat1{
+        align-self: flex-start;
+        margin-top: 5vh;
+        margin-left: 0;
+    }
+    .rat3{
+        align-self: flex-end;
+        margin-bottom: 5vh;
+        margin-right: 0;
+    }
+}
+@media(max-width: 920px)
+{
+    .main-container{
+        padding-left: 25vw;
+        padding-right: 25vw;
+    }
+    .description-ratings-container{
+        grid-template-columns: 1fr;
+    }
+    .big-header{
+        width: 100%;
+        text-align: center;
+        padding: 3vh 0;
+    }
+    .description{
+        width: 100%;
+        padding-right: 1vw;
+        padding-left: 1vw;
+        text-align: center;
+    }
+    .rating-div{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin: 1vh 0;
+        padding: 1.5vh;
+    }
+    .stars-container{
+        margin-bottom: 0.7vh;
+        margin-right: 0;
+    }
+    .stars-container img{
+        margin: 0 2px;
+    }
+    .testimonials-container{
+        flex-direction: column;
+    }
+    .testimonial-card{
+        width: 100%;
+        min-height: 30%;
+        padding: 2rem;
+        color: white;
+        margin: 1vh 0;
+    }
+    .colton{
+        align-self: auto;
+    }
+    .irene{
+        align-self: auto;
+    }
+    .anne{
+        align-self: auto;
+    }
+    .buyer-profile{
+        width: 75%;
+    }
+}
+@media(max-width: 670px)
+{
+    .main-container{
+        max-width: 350px;
+        min-width: 325px;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        margin: 0 auto;
+    }
+    .buyer-profile{
+        width: 85%;
+    }
+}
+@media(max-width: 400px){
+    .desktop-bg{
+        display: none;
+    }
+    .mobile-bg{
+        display: block;
+    }
+    .mobile-top-bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    .mobile-bottom-bg{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
 }
